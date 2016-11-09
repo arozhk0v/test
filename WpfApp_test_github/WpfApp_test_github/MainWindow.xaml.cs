@@ -23,6 +23,9 @@ namespace WpfApp_test_github
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = new ApplicationViewModel();
         }
+
     }
 }
