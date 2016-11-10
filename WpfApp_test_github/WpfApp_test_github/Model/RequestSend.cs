@@ -26,7 +26,8 @@ namespace WpfApp_test_github.Model
         /// </summary>
         public static XDocument Request()   
         {
-            var xmlDoc = XDocument.Load("https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5");
+            //Здесь нужно вставить свой запрос к API.
+            var xmlDoc = XDocument.Load("http://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findItemsByKeywords&SERVICE-VERSION=1.0.0&SECURITY-APPNAME=AlexRozh-testApp-PRD-b45f64428-459236e4&RESPONSE-DATA-FORMAT=XML&REST-PAYLOAD&keywords=harry%20potter%20phoenix&itemFilter.name=MaxPrice&itemFilter.value=10&paginationInput.entriesPerPage=12");
             return xmlDoc;
         }
     }
