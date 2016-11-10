@@ -8,7 +8,7 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="0.8*" />
         </Grid.ColumnDefinitions>
-
+        <!--
         <ListBox Grid.Column="0" ItemsSource="{Binding Persons}" Margin="0,1,0,-1">
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -18,5 +18,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        -->
+        
     </Grid>
 </Window>

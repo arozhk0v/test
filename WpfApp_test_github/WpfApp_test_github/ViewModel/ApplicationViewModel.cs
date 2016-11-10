@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using WpfApp_test_github.Model;
 
 namespace WpfApp_test_github
@@ -18,8 +19,12 @@ namespace WpfApp_test_github
         private Person person;
         public ObservableCollection<Person> Persons { get; set; }
 
+        public XDocument xmlDoc;
+
         public ApplicationViewModel()
         {
+            xmlDoc = RequestSend.Request();
+
             Persons = new ObservableCollection<Person>
             {
                 new Person { Name = "Григорий" },

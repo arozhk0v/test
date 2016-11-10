@@ -26,5 +26,6 @@ namespace WpfApp_test_github.Model
                 PropertyChanged(this, new PropertyChangedEventArgs(prop));
         }
 
+
     }
 }
