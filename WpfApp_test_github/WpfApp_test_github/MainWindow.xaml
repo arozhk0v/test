@@ -4,10 +4,26 @@
         xmlns:local ="clr-namespace:WpfApp_test_github"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+        <!--
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="0.8*" />
         </Grid.ColumnDefinitions>
+        
+        -->
+        
+        <StackPanel>
+            <TextBlock Text="{Binding Path=Json}" />
+
+            <TextBlock Text="{Binding Path=Product_.Base}"/>
+            <TextBlock Text="{Binding Path=Product_.Date}"/>
+            <!-- <TextBlock Text="{Binding Path=Product_.Rates}"/> -->
+            
+        </StackPanel>
+        
+        
+        
+        
         <!--
         <ListBox Grid.Column="0" ItemsSource="{Binding Persons}" Margin="0,1,0,-1">
             <ListBox.ItemTemplate>

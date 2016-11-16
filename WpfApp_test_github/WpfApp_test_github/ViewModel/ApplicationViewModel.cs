@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -17,13 +18,20 @@ namespace WpfApp_test_github
     class ApplicationViewModel : INotifyPropertyChanged
     {
         private Person person;
-        public ObservableCollection<Person> Persons { get; set; }
 
-        public XDocument xmlDoc;
+        public Product Product_ { get; set; }
+        private string json;
+
+        public string Json { get; set; }
+        public ObservableCollection<Person> Persons { get; set; }
 
         public ApplicationViewModel()
         {
-            xmlDoc = RequestSend.Request();
+            Json = RequestSend.GET("http://api.fixer.io/latest?symbols=USD,GBP");
+
+            Product_ = JsonConvert.DeserializeObject<Product>(Json);
+
+            
 
             Persons = new ObservableCollection<Person>
             {
@@ -39,6 +47,12 @@ namespace WpfApp_test_github
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(prop));
         }
+
+        
+
+
+
+        
 
     }
 }
