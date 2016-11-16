@@ -8,6 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using WpfApp_test_github.DB;
 using WpfApp_test_github.Model;
 
 namespace WpfApp_test_github
@@ -19,10 +20,10 @@ namespace WpfApp_test_github
     {
         private Person person;
 
-        public Product Product_ { get; set; }
+        public static Product Product_ { get; set; }
         private string json;
 
-        public string Json { get; set; }
+        public static string Json { get; set; }
         public ObservableCollection<Person> Persons { get; set; }
 
         public ApplicationViewModel()
@@ -31,7 +32,13 @@ namespace WpfApp_test_github
 
             Product_ = JsonConvert.DeserializeObject<Product>(Json);
 
-            
+            //ProductContext context = new ProductContext();
+
+            //// Добавить в DbSet
+            //context.Products.Add(Product_);
+
+            //// Сохранить изменения в базе данных
+            //context.SaveChanges();
 
             Persons = new ObservableCollection<Person>
             {

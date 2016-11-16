@@ -12,6 +12,13 @@ namespace WpfApp_test_github.DB
     {
 
         /// <summary>
+        /// Указание имени БД.
+        /// </summary>
+        public ProductContext() : base("TestDB")
+        {
+        }
+
+        /// <summary>
         /// Создание таблицы в бд.
         /// </summary>
         public DbSet<Product> Products { get; set; }
