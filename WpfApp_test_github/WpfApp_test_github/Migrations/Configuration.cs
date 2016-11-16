@@ -30,12 +30,12 @@ namespace WpfApp_test_github.Migrations
             //    );
             //
 
-            ApplicationViewModel.Json = RequestSend.GET("http://api.fixer.io/latest?symbols=USD,GBP");
+            //ApplicationViewModel.Json = RequestSend.GET("http://api.fixer.io/latest?symbols=USD,GBP");
 
-            ApplicationViewModel.Product_ = JsonConvert.DeserializeObject<Product>(ApplicationViewModel.Json);
+            //ApplicationViewModel.Product_ = JsonConvert.DeserializeObject<Product>(ApplicationViewModel.Json);
 
-            // Добавить в DbSet
-            context.Products.AddOrUpdate(ApplicationViewModel.Product_);
+            //// Добавить в DbSet
+            //context.Products.AddOrUpdate(ApplicationViewModel.Product_);
 
             //context.Products.AddOrUpdate(p => p.Id,
             //      new Product { Base = "EUR",  Date = DateTime.Today}

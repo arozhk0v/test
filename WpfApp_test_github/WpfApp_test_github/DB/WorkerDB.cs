@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,31 +8,38 @@ using WpfApp_test_github.Model;
 
 namespace WpfApp_test_github.DB
 {
+
+    /// <summary>
+    /// Класс для работы с БД.
+    /// </summary>
     public class WorkerDB
     {
-        public WorkerDB()
-        {
+        private string json;
+        public static string Json { get; set; }
 
+        public static Product Product_ { get; set; }
+
+
+        /// <summary>
+        /// Конструктор в который нужно передать нужный url.
+        /// </summary>
+        /// <param name="url"></param>
+        public WorkerDB(string url)
+        {
+            Json = RequestSend.GET(url);
+            Product_ = JsonConvert.DeserializeObject<Product>(Json);
         }
 
-        //public static void AddNewProduct()
-        //{
-        //    ProductContext context = new ProductContext();
+        public void AddNewProduct()
+        {
+            ProductContext context = new ProductContext();
 
-        //    // Создать нового покупателя --------------------------------------------здесь доделать!!
-        //    Product product = new Product
-        //    {
-        //        Base = "Иван",
-        //        Date = "Иванов",
-        //        Age = 30
-        //    };
+            // Добавить в DbSet
+            context.Products.Add(Product_);
 
-        //    // Добавить в DbSet
-        //    context.Customers.Add(product);
-
-        //    // Сохранить изменения в базе данных
-        //    context.SaveChanges();
-        //}
+            // Сохранить изменения в базе данных
+            context.SaveChanges();
+        }
 
     }
 }

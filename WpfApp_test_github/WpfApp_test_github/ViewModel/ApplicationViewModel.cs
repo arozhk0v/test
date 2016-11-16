@@ -18,35 +18,23 @@ namespace WpfApp_test_github
     /// </summary>
     class ApplicationViewModel : INotifyPropertyChanged
     {
-        private Person person;
-
-        public static Product Product_ { get; set; }
-        private string json;
-
-        public static string Json { get; set; }
-        public ObservableCollection<Person> Persons { get; set; }
 
         public ApplicationViewModel()
         {
-            Json = RequestSend.GET("http://api.fixer.io/latest?symbols=USD,GBP");
+            //Тестирование запроса и сериализации.
+            //Json = RequestSend.GET("http://api.fixer.io/latest?symbols=USD,GBP");
+            //Product_ = JsonConvert.DeserializeObject<Product>(Json);
 
-            Product_ = JsonConvert.DeserializeObject<Product>(Json);
 
-            //ProductContext context = new ProductContext();
+            // Добавление нового значения в БД.
+            //WorkerDB add = new WorkerDB("http://api.fixer.io/2000-01-03");
+            //add.AddNewProduct();
 
-            //// Добавить в DbSet
-            //context.Products.Add(Product_);
-
-            //// Сохранить изменения в базе данных
-            //context.SaveChanges();
-
-            Persons = new ObservableCollection<Person>
-            {
-                new Person { Name = "Григорий" },
-                new Person { Name = "Сергей" },
-                new Person { Name = "Петр" }
-            };
         }
+
+
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
         public void OnPropertyChanged([CallerMemberName]string prop = "")
