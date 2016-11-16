@@ -14,7 +14,7 @@ namespace WpfApp_test_github.DB
         /// <summary>
         /// Указание имени БД.
         /// </summary>
-        public ProductContext() : base("TestDB")
+        public ProductContext() : base("TestDBsds")
         {
         }
 
