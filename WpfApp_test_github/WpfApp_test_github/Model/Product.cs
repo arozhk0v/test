@@ -13,11 +13,11 @@ namespace WpfApp_test_github.Model
     {
 
         public int Id { get; set; }
-        public string Base { get; set; }
+        public string @Base { get; set; }
 
         public DateTime Date { get; set; }
 
-        //public Dictionary<string, Decimal> Rates { get; set; }
+        public Rates rates { get; set; }
 
     }
 }

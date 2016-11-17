@@ -21,10 +21,6 @@ namespace WpfApp_test_github
 
         public ApplicationViewModel()
         {
-            //Тестирование запроса и десериализации.
-            //Json = RequestSend.GET("http://api.fixer.io/latest?symbols=USD,GBP");
-            //Product_ = JsonConvert.DeserializeObject<Product>(Json);
-
 
             // Добавление нового значения в таблицу Products.
             //WorkerDB.AddNewProduct("http://api.fixer.io/latest");
@@ -33,8 +29,6 @@ namespace WpfApp_test_github
             WorkerDB.DeleteAllRows("Products");
             var date1 = new DateTime(2000,01,01);
             var date2 = new DateTime(2000,01,05);
-
-            //WorkerDB.AddNewProduct("http://api.fixer.io/" + date1.Year + "-" + date1.ToString("MM") + "-" + date1.ToString("dd"));
 
             WorkerDB.AddNewProducts(date1, date2);
         }
