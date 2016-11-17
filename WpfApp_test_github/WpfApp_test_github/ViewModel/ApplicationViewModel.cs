@@ -21,15 +21,22 @@ namespace WpfApp_test_github
 
         public ApplicationViewModel()
         {
-            //Тестирование запроса и сериализации.
+            //Тестирование запроса и десериализации.
             //Json = RequestSend.GET("http://api.fixer.io/latest?symbols=USD,GBP");
             //Product_ = JsonConvert.DeserializeObject<Product>(Json);
 
 
-            // Добавление нового значения в БД.
-            //WorkerDB add = new WorkerDB("http://api.fixer.io/2000-01-03");
-            //add.AddNewProduct();
+            // Добавление нового значения в таблицу Products.
+            //WorkerDB.AddNewProduct("http://api.fixer.io/latest");
+            
+            //Удаление всех строк из таблице.
+            WorkerDB.DeleteAllRows("Products");
+            var date1 = new DateTime(2000,01,01);
+            var date2 = new DateTime(2000,01,05);
 
+            //WorkerDB.AddNewProduct("http://api.fixer.io/" + date1.Year + "-" + date1.ToString("MM") + "-" + date1.ToString("dd"));
+
+            WorkerDB.AddNewProducts(date1, date2);
         }
 
 
