@@ -1,19 +1,36 @@
-﻿<Window x:Class="WpfApp_test_github.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local ="clr-namespace:WpfApp_test_github"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        xmlns:UserControl ="clr-namespace:WpfApp_test_github.View"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="WpfApp_test_github.MainWindow"
+        Title="MainWindow" Height="450" Width="550">
+    <Grid Margin="0,0,-8,-8" RenderTransformOrigin="0.173,0.366">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <!--
         <StackPanel>
             <TextBlock Text="{Binding Path=Json}" />
 
             <TextBlock Text="{Binding Path=Product_.Base}"/>
             <TextBlock Text="{Binding Path=Product_.Date}"/>
-            <!-- <TextBlock Text="{Binding Path=Product_.Rates}"/> -->
-            
+            <TextBlock Text="{Binding Path=Product_.Rates}"/>
+
         </StackPanel>
+        -->
+
+
+        <DatePicker Height="35" Margin="10,10,393,4"/>
+        <DatePicker Height="35" Margin="156,10,247,4"/>
+
+        <Button Margin="322,10,76,4" Content="{Binding UC}"/>
         
-        
+        <StackPanel Name="StackPanel1" Grid.Row="1" Orientation="Vertical">
+              
+        </StackPanel>
+
+
     </Grid>
 </Window>

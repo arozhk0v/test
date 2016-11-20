@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using WpfApp_test_github.DB;
 using WpfApp_test_github.Model;
+using WpfApp_test_github.View;
+
 
 namespace WpfApp_test_github
 {
@@ -18,6 +20,7 @@ namespace WpfApp_test_github
     /// </summary>
     class ApplicationViewModel : INotifyPropertyChanged
     {
+
 
         public ApplicationViewModel()
         {

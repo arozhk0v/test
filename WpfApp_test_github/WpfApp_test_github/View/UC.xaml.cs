@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -14,27 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfApp_test_github.View;
 
-namespace WpfApp_test_github
+namespace WpfApp_test_github.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for UC.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UC : UserControl
     {
-        public MainWindow()
+        public UC()
         {
             InitializeComponent();
-
-            DataContext = new ApplicationViewModel();
         }
-
-        //private void Button_Click(object sender, RoutedEventArgs e)
-        //{
-        //    UC ui = new UC();
-        //    StackPanel1.Children.Add(ui);
-        //}
-
     }
 }
