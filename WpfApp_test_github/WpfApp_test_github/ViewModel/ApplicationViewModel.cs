@@ -18,7 +18,7 @@ namespace WpfApp_test_github
     /// <summary>
     /// View Model
     /// </summary>
-    class ApplicationViewModel : INotifyPropertyChanged
+    class ApplicationViewModel 
     {
 
 
@@ -34,24 +34,7 @@ namespace WpfApp_test_github
             var date2 = new DateTime(2000,01,05);
 
             WorkerDB.AddNewProducts(date1, date2);
-        }
-
-
-
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName]string prop = "")
-        {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(prop));
-        }
-
-        
-
-
-
-        
+        }  
 
     }
 }

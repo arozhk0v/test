@@ -30,6 +30,13 @@ namespace WpfApp_test_github
             DataContext = new ApplicationViewModel();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            UC ui = new UC();
+            G1.Children.Add(ui);
+            Grid.SetRow(ui, 2);
+        }
+
         //private void Button_Click(object sender, RoutedEventArgs e)
         //{
         //    UC ui = new UC();

@@ -4,8 +4,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="250" d:DesignWidth="300" DataContext="{Binding}">
+             d:DesignHeight="250" d:DesignWidth="380" DataContext="{Binding}">
     <Grid>
-        <DataGrid> </DataGrid>
+        <DataGrid AutoGenerateColumns="False" x:Name="productsGrid">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Id}" Header="Id"/>
+                <DataGridTextColumn Binding="{Binding Base}" Header="Base"/>
+                <DataGridTextColumn Binding="{Binding Date}" Header="Date" Width="165"/>
+                <DataGridTextColumn Binding="{Binding rates.CAD}" Header="CAD" Width="90"/>
+                <DataGridTextColumn Binding="{Binding rates.GBP}" Header="GBP" Width="90"/>
+                <DataGridTextColumn Binding="{Binding rates.USD}" Header="USD" Width="90"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </UserControl>
