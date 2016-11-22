@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace WpfApp_test_github.Model
+namespace WpfApp_test_github.ViewModel
 {
     public class Rates
     {

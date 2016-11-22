@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WpfApp_test_github.Model;
+using WpfApp_test_github.ViewModel;
 
 namespace WpfApp_test_github.DB
 {
@@ -54,10 +54,15 @@ namespace WpfApp_test_github.DB
         /// </summary>
         public static void AddNewProducts(DateTime date1, DateTime date2)
         {
-            for (var currentDay = date1; currentDay <= date2; currentDay = currentDay.AddDays(1))
+            if (date1 != date2)
             {
-                AddNewProduct("http://api.fixer.io/" + currentDay.Year + "-" + currentDay.ToString("MM") + "-" + currentDay.ToString("dd"));
+
+                for (var currentDay = date1; currentDay <= date2; currentDay = currentDay.AddDays(1))
+                {
+                    AddNewProduct("http://api.fixer.io/" + currentDay.Year + "-" + currentDay.ToString("MM") + "-" + currentDay.ToString("dd"));
+                }
             }
+            else AddNewProduct("http://api.fixer.io/" + date1.Year + "-" + date1.ToString("MM") + "-" + date1.ToString("dd"));
             
         }
 

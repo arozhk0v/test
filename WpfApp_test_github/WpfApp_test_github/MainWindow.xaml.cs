@@ -14,7 +14,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp_test_github.DB;
 using WpfApp_test_github.View;
+using System.Data.Entity;
 
 namespace WpfApp_test_github
 {
@@ -36,12 +38,6 @@ namespace WpfApp_test_github
             G1.Children.Add(ui);
             Grid.SetRow(ui, 2);
         }
-
-        //private void Button_Click(object sender, RoutedEventArgs e)
-        //{
-        //    UC ui = new UC();
-        //    StackPanel1.Children.Add(ui);
-        //}
 
     }
 }

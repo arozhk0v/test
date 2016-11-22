@@ -29,7 +29,9 @@ namespace WpfApp_test_github.View
             InitializeComponent();
             db = new ProductContext();
             db.Products.Load();
+            productsGrid.ItemsSource = null;
             productsGrid.ItemsSource = db.Products.Local.ToBindingList();  //привязка к кэшу
+            WorkerDB.DeleteAllRows("Products");
         }
 
     }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 
 
-namespace WpfApp_test_github.Model
+namespace WpfApp_test_github.ViewModel
 {
     /// <summary>
     /// Класс для отправления запроса на сторонний API.

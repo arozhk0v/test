@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="250" d:DesignWidth="380" DataContext="{Binding}">
+    
     <Grid>
         <DataGrid AutoGenerateColumns="False" x:Name="productsGrid">
             <DataGrid.Columns>
@@ -16,5 +17,6 @@
                 <DataGridTextColumn Binding="{Binding rates.USD}" Header="USD" Width="90"/>
             </DataGrid.Columns>
         </DataGrid>
+        
     </Grid>
 </UserControl>

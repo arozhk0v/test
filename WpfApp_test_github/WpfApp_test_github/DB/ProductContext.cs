@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WpfApp_test_github.Model;
+using WpfApp_test_github.ViewModel;
 
 namespace WpfApp_test_github.DB
 {

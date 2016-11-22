@@ -69,6 +69,7 @@
       <DependentUpon>201611201517401_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="ViewModel\Command.cs" />
     <Compile Include="View\UC.xaml.cs">
       <DependentUpon>UC.xaml</DependentUpon>
     </Compile>
